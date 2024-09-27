@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Portfolio</title>
+  
+  <!-- Embedded CSS -->
+  <style>
+    /* Resetting basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f4f4f4;
+    }
+
+    /* Hero Section (Home Page) */
+    .hero {
+      background: url('https://www.ensembletech.in/wp-content/uploads/2018/07/portfolio-background.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    /* About Me Section */
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #fff;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    .about-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .about-section ul {
+      list-style-type: square;
+      text-align: left;
+    }
+
+    .about-section li {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    /* Portfolio Section */
+    .portfolio-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #fafafa;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    .portfolio-gallery {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .project-item {
+      width: 45%;
+      margin-bottom: 20px;
+    }
+
+    .project-item img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+
+    .project-item p {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #fff;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .portfolio-gallery {
+        flex-direction: column;
+      }
+
+      .project-item {
+        width: 100%;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Home Section -->
+  <header class="hero" id="home">
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Discover my work and skills</p>
+    </div>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+  <h2>About Me</h2>
+  <img src="C:\Users\Herolance\OneDrive\Pictures\Saved Pictures\Aiddel.jpg" alt="Muhammad Aiddel" style="width:200px; height:auto; border-radius:50%;">
+  <p>Hi, I'm Muhammad Aiddel Bin Mohd Azuan. I specialize in Coding, with experience in HTML, C++, and Java.</p>
+  <ul>
+    <li>Skill 1: Good Communication skills.</li>
+    <li>Skill 2: Good Computer Knowledge.</li>
+    <li>Skill 3: Good Leadership skills.</li>
+  </ul>
+</section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio-section">
+    <h2>My Projects</h2>
+    <div class="portfolio-gallery">
+      <div class="project-item">
+        <img src="https://www.shutterstock.com/image-photo/moscow-russia-1-june-2020-600nw-1785915782.jpg" alt="Project 1">
+        <p>I have used C++ to make an Airline booking ticket system. </p>
+      </div>
+      <div class="project-item">
+        <img src="https://verpex.com/assets/uploads/images/blog/Basic-HTML-Codes-for-Websites.webp?v=1691760654" alt="Project 2">
+        <p>I have made a website using HTML which allows users to access a farming application.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <form action="submit_form.php" method="POST" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+</body>
+</html>
